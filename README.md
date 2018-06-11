@@ -1,123 +1,283 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>我的个人主页</title>
-	<meta charset="utf-8">
-	<meta name=”viewport” content=”width=device-width, initial-scale=1″ />
-	<link rel="stylesheet" type="text/css" href="personal.css">
-	<link rel="stylesheet" href="font/iconfont.css">
-	<link rel="stylesheet" href="font1/iconfont.css">
-</head>
-
-<body>
-
-	<div id="nav">                                              <!-- 顶部导航栏 -->
-		<div id="top">
-			<span>我的个人主页</span>
-		</div>
-		<ul class="guide">
-			<li class="link"><a class="scroll" href="#information">个人信息</a></li>
-			<li class="link"><a class="scroll" href="#works">作品预览</a></li>
-			<li class="link"><a class="scroll" href="#contact">联系我吧</a></li>
-		</ul>
-	</div>
-
-	<a name="information"></a>									
-    <div id="blank"></div>										<!-- 被导航栏遮盖的部分 -->
-
-	<div id="main">														  <!-- 主体部分 -->
-		<div class="container">										<!-- 中间显示内容 -->
-			<div class="information">                         <!-- 个人资料展示 -->
-				<div class="introduction">
-					
-				</div>
-				<div class="photo">
-					<img id="myphoto" src="y&f.jpg">
-				</div>	
-			</div>
-			
-			<div class="works" >									<!-- 个人作品缩略图 -->
-				<a name="works"></a>
-				<div class="headline">
-					<h1>PORTFOLIO</h1>
-				</div>
-				<hr class="star_dark"></hr>
-				<ul class="box">
-					<a href="http://www.baidu.com" target="_blank"><li class="item"></li></a>
-					<li class="item"></li>
-					<li class="item"></li>
-					<li class="item"></li>
-				</ul>
-			</div>	
-			
-			<div class="contact">									<!-- 与我联系 -->
-				<a name="contact"></a>
-				<div class="headline">
-					<h1>CONTACT ME</h1>
-				</div>
-				<hr class="star_dark"></hr>
-				<div class="input">
-					<input type="text" name="" value="Name"></input>
-					<input type="text" name="" value="Email Address"></input>
-					<input type="text" name="" value="Phone Number"></input>
-					<input type="text" name="" value="Message" id="Message"></input>
-					<button type="submit" value="send" id="send">Send</button>
-				</div>
-				<div class="supplementary">
-					<p>Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life, or even if only for some nice Fika here in stunning Toronto... just feel free to drop me a line anytime.</p>
-					<br />
-					<p>I promise to reply A.S.A.P.</p>
-					<p id="note">Note: No spam/soliciting pour moi, merci :)</p>
-				</div>
-			</div>								
-		
-		</div>
-
-	</div>
-
-
-	<div id="friendlink">							<!-- 社交网站链接 -->
-		<div id="about" class="friendlink">
-			<h3 class="about">ABOUT THIS PAGE</h3>
-			<p id="made">Made with <i class="iconfont icon-beizi"></i> and <i class="iconfont icon-yinle"></i> by <a href="#" id="hhb">Hu Hangbin</a></p>
-		</div>
-		<div id="around" class="friendlink">
-			<h3 class="around">AROUND THE WEB</h3>
-			<ul id="font">
-				<a href="https://im.qq.com/index.shtml" target="_blank">
-					<li class="font-item">
-						<i class="iconfont icon-qq"></i>
-					</li>
-				</a>
-				<a href="https://weibo.com/" target="_blank">
-					<li class="font-item">
-						<i class="iconfont icon-weibo"></i>
-					</li>
-				</a>
-				<a href="https://wx.qq.com/" target="_blank">
-					<li class="font-item">
-						<i class="iconfont icon-wechat"></i>
-					</li>
-				</a>
-				<a href="https://github.com/github" target="_blank">
-					<li class="font-item">
-						<i class="iconfont icon-github"></i>
-					</li>
-				</a>				
-			</ul>
-		</div>
-	</div>										
+/*html{
+	height: 100%;
+}*/
+body{
+	/*height: 100%;*/
+	padding: 0px;
+	margin:0px;
+}
+#blank{
+	width: 100%;
+	height: 60px;
+	margin: 0px;
+}
+#nav{
+	width: 100%;
+	height: 40px;
+	background: rgba(128,64,128,1);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+}
+#main{
+	width: 100%;
+	height: 2000px;
+	background: #696969;
+}
+#friendlink{
+	width: 100%;
+	height: 200px;
+	background: #708090;
+}
+#footer{
+	width: 100%;
+	height: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: black;
+	text-align: center;
+}
+.container{
+	width: 60%;
+	height: 100%;
+	background:rgba(225,225,225,1);
+	margin:0 auto;
+	padding: 0px;
+}
+.information{
+	width: 100%;
+	height:300px;
+	background: #efcfcf;
+	margin:0 auto;
 	
+}
+.works{
+	width: 100%;
+	height: 900px;
+	margin:0 auto;
+}
+.contact{
+	width: 100%;
+	height: 800px;
+	margin:0 auto;
+	background: #ffE0E6;
+}
+#writer{
+	color: white;
+	font-size: 15px;
+	margin:0 auto;
+	height: 20px;
+}
+#top{
+	width: 200px;
+	/*background-color: white;*/
+	text-align: center;
+	float: left;
+	margin-left: 18%;
+	padding-top: 9px;
+	padding-bottom: 11px;
+	height: 20px;
+	font-size: 1.2em;
+}
+.guide{
+	list-style-type: none;
+	-webkit-padding-start:0;
+	-moz-padding-start:0;
+	float: right;
+	margin:0;
+	margin-right: 18%;
+	height: 40px;
+}
+.scroll{
+	float: left;
+	width: 80px;
+	height: 20px;
+	margin: 0px;
+	padding: 9px 20px 11px 20px;
+	/*background-color: white;*/
+	text-align: center;
+}
+#myphoto{
+	width: 18%;
+	height: 60%;
+	margin-right: 6%;
+	margin-top:50px;
+	border-radius: 50%;
+	float: right;
+	opacity: 0.6;
+}
+#myphoto:hover{
+	opacity: 1.0;
+}
+.introduction{
+	width: 60%;
+	height:200px;
+	float:left;
+	background: white;
+	margin-left: 8%;
+	margin-top: 60px;
+}
+.headline{
+	text-align: center;
+	padding-top: 50px;
+	margin-bottom: 30px;
+}
+.star_dark{
+	width: 500px;
+	border: solid 3px #888;
+}
+.box{
+	width: 90%;
+	height: 450px;
+	margin:0 auto;
+	margin-top: 150px;
+	border: solid 2px black;
+	list-style-type: none;
+	-webkit-padding-start:0px;
+	-moz-padding-start:0px;
+	/*background:url("lafa.jpg");*/
+}
+li.item{
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+.item:nth-child(1){
+	background:url("lafa.jpg") center/cover;
+}
+.item:nth-child(2){
+	background:url("918.jpg") center/cover;
+}
+.item:nth-child(3){
+	background:url("msld.jpg") center/cover;
+}
+.item:nth-child(4){
+	background:url("p1.jpg") center/cover;
+}
+.box:hover .item{
+	width: 10%;
+}
+.item:hover {
+	width: 70%;
+}
 
-	<div id="footer">												<!-- 底栏 -->
-		<p id="writer">Written and coded by Hu Hangbin</p>
-	</div>											
+.link{
+	float: left;
+}
+a:-webkit-any-link{
+	color: black;
+	text-decoration: none;
+}
+
+a:link{
+	color: black;
+}
+a:visited{
+	background: white;
+	color: black;
+}
+a:hover{
+	background: purple;
+	color: white;
+}
+a:active{
+	background: white;
+	color: black;
+}
+.input{
+	float: left;
+	width: 35%;
+	margin-left: 80px;
+	margin-top: 80px;
+}
+input{
+	float: left;
+	clear: left;
+	width: 100%;
+	height: 80px;
+	border-width: 0px 0px 1px 0px;
+	border-color: gray;
+	margin-top: 2px;
+	background-color: #ffE0E6;
+	font-size: 2em;
+}
+#Message{
+	height: 160px;
+}
+.supplementary{
+	width: 35%;
+	height: 500px;
+	float: right;
+	margin-right: 8%;
+	/*border: solid 1px;*/
+	margin-top: 80px;
+	font-size: 1.1em;
+	font-family: "Helvetica Neue";
+	color: #999;
+}
+#send{
+	margin-top: 40px;
+	width: 60px;
+	height: 30px;
+	font-size: 1.2em;
+}
+#note{
+	margin-top: 190px;
+}
+h3{	
+	font-size: 1.5em;
+	color: #fff;
+	margin-top: 10px;
+}
+/*.about{
+	float: left;
+	margin-left: 25%;	
+}
+.around{
+	float: right;
+	margin-right: 25%;
+}*/
+.friendlink{
+	width: 16%;
+	height: 60%;
+    margin-top: 40px;
+    text-align: center;
+}
+#about{
+	float: left;
+	margin-left: 22%;
+}
+#around{
+	float: right;
+	margin-right: 22%;
+}
+#made{
+	color: #fff;
+	width: 180px;
+	margin:0 auto;
+}
+a#hhb{
+	color: #ff0;
+}
+#font{
+	list-style-type: none;
+}
+.font-item{
+	float: left;
+	padding: 15px 17px 15px 17px;
+	border: solid 2px #fff;
+	border-radius: 50%;
+	margin: 0 2px;
+	color: #fff;
+}
+.font-item:hover i{
+	color: purple;
+}
+.font-item:hover{
+	background: #fff;
+}
 
 
-
-	<script type="text/javascript">
-		
-	</script>
-</body>
-</html>
 
